@@ -2,9 +2,10 @@ const mongoose = require('mongoose');
 
 const movieSchema = new mongoose.Schema({
 
-    name: {
+    movie: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
 
     rating: {
@@ -13,7 +14,7 @@ const movieSchema = new mongoose.Schema({
     },
 
     date: {
-        type: Number,
+        type: String,
         required: true
     }
 });
