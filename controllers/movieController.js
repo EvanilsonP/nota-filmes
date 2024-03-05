@@ -32,4 +32,22 @@ const movieById = async (req, res) => {
     }
 };
 
-module.exports = { homePage, addMovie, movieById };
+// Update movie
+const updatedMovie = async (req, res) => {
+    try {
+        const movieId = req.params.id;
+        const updatedMovie = await Movie.findByIdAndUpdate(movieId, {
+            movie: req.body.movie,
+            rating: req.body.rating,
+            date: req.body.date
+        });
+
+        res.status(200).send(updatedMovie);
+    } 
+
+    catch (error) {
+        console.log(error);
+    }
+};
+
+module.exports = { homePage, addMovie, movieById, updatedMovie };
