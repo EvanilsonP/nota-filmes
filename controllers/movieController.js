@@ -76,5 +76,17 @@ const allMovies = async (req, res) => {
     res.render('movies', { title: 'Movies', movies});
 };
 
+// Search field
+const search = async (req, res) => {
+    try {
+        const query = req.query.query;
+        const movie = await Movie.find({ movie: { $regex: query, $options: 'i' } });
+        res.render('search', { title: 'Busca por filmes', movie });
+    } 
+    catch (error) {
+        console.log(error);    
+    }
+}
 
-module.exports = { homePage, addMovie, movieById, updatedMovie, deleteMovie, allMovies};
+
+module.exports = { homePage, addMovie, movieById, updatedMovie, deleteMovie, allMovies, search };

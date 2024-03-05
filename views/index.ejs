@@ -8,22 +8,24 @@
 </head>
 <body>
     
-      <header class="main-header">
-        <div class="container">
+<header class="main-header">
+      <div class="container">
           <h1>Meus filmes</h1>
-          <nav>
-            <ul>
-              <li><a href="/">Página Inicial</a></li>
-              <li><a href="/movies">Filmes</a></li>
-              <li><a href="#">Categorias</a></li>
-            </ul>
-            <div class="search-bar">
-              <input type="text" placeholder="Pesquise por um filme aqui">
-              <button type="submit">Pesquise</button>
-            </div>
-          </nav>
-        </div>
-      </header>
+              <nav>
+
+                <ul>
+                  <li><a href="/">Página Inicial</a></li>
+                  <li><a href="/movies">Filmes</a></li>
+                  <li><a href="#">Categorias</a></li>
+                </ul>
+                
+              <form action="/search" method="GET" class="search-bar">
+                  <input type="search" name="query" placeholder="Pesquise por um filme">
+              </form>
+
+             </nav>
+      </div>
+</header>
     
       <div id="container">
         <form action="/addMovie" method="POST">
@@ -48,6 +50,6 @@
     
         </form>
       </div>
-
+      
 </body>
 </html>

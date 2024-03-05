@@ -180,3 +180,44 @@ label {
   label:hover {
     color: #3498db; /* Azul mais claro no hover */
   }
+
+  section {
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    padding: 20px; /* Espaçamento interno */
+  }
+  
+  div {
+    max-width: 800px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centralizar o conteúdo na página */
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #ddd; /* Linha divisória entre os itens */
+    margin-bottom: 50px; /* Espaçamento entre os itens */
+  }
+  
+  p {
+    margin: 0;
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+  }
+  
+  /* Estilos adicionais para realçar os detalhes do filme */
+  p:nth-child(odd) {
+    font-weight: bold; /* Tornar ímpares (Movie, Date) em negrito */
+    color: #3498db; /* Cor mais escura para os títulos */
+  }
+  
+  p:nth-child(even) {
+    color: #555; /* Cor mais escura para os detalhes */
+  }
+
+  .title {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  

@@ -1,0 +1,17 @@
+<h1>Resultados</h1>
+
+<!-- Rendering search page with the recipe informations -->
+<div>
+  <% if(typeof movie !== 'undefined' && movie.length > 0) { %>
+    <% movie.forEach(function(movie, index){ %>
+    
+
+      <div><%- movie.movie %></div>
+      <div><%- movie.rating %></div>
+      <div><%- movie.date %></div>
+
+    <% }) %>
+  <% } else { %>
+    <p>No items found.</p>
+  <% } %>
+</div>
