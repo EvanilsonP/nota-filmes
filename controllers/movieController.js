@@ -50,4 +50,16 @@ const updatedMovie = async (req, res) => {
     }
 };
 
-module.exports = { homePage, addMovie, movieById, updatedMovie };
+// Delete a movie
+const deleteMovie = async (req, res) => {
+    try {
+        const movieId = req.params.id;
+        await Movie.findByIdAndDelete(movieId);
+        res.status(200).json({ message: 'Movie deleted. '}); 
+    } 
+    catch (error) {
+        console.log(error);
+    }
+};
+
+module.exports = { homePage, addMovie, movieById, updatedMovie, deleteMovie };
