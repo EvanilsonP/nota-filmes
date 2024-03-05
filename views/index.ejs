@@ -3,47 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title> <%- title %></title>
 </head>
 <body>
     
-
-    <form id="myForm" action="/addMovie" method="POST">
-
-        <div>
+      <header class="main-header">
+        <div class="container">
+          <h1>Meus filmes</h1>
+          <nav>
+            <ul>
+              <li><a href="#">Página Inicial</a></li>
+              <li><a href="#">Sobre mim</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+            <div class="search-bar">
+              <input type="text" placeholder="Pesquise por um filme aqui">
+              <button type="submit">Pesquise</button>
+            </div>
+          </nav>
+        </div>
+      </header>
+    
+      <div id="container">
+        <form action="/addMovie" method="POST">
+    
+          <div class="form-group">
             <label for="name">Movie:</label>
             <input type="text" id="name" name="movie" placeholder="Enter movie name">
-        </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="rating">Rating:</label>
+            <input type="text" id="rating" name="rating" placeholder="Rating">
+          </div>
+    
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" placeholder="Date">
+          </div>
+            
+          <button type="submit" class="submit-btn">Submit</button>
+    
+        </form>
+      </div>
 
-        <div>
-            <label for="name">Rating:</label>
-            <input type="text" id="password" name="rating" placeholder="Rating">
-        </div>
-
-        <div>
-            <label for="name">Date:</label>
-            <input type="date" id="password" name="date" placeholder="Date">
-        </div>
-        
-        <button type="submit" class="submit-btn">Submit</button>
-
-    </form>
-
-    <section>
-        <h1>MOVIES</h1>
-
-        <div>
-            <% if(movies != '') { %>
-                <% movies.forEach(function(movie, index) { %>
-                    <ul>
-                        <p> <%- movie.movie %></p>
-                        <p> <%- movie.rating %></p>
-                        <p> <%- movie.date %></p>
-                    </ul>
-                <% }) %>
-            <% } %>
-        </div>
-
-    </section>
-</body>
-</html>
+    
+    
+    </body>
+    </html>

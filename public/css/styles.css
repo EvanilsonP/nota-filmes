@@ -1,0 +1,182 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Estilos para o cabeçalho */
+  .main-header {
+    background-color: #34495e; /* Azul escuro */
+    color: #ecf0f1; /* Branco azulado */
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #e74c3c; /* Vermelho */
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ecf0f1;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    border-color: #3498db; /* Azul mais claro */
+  }
+  
+  .search-bar button {
+    background-color: #ecf0f1;
+    color: #34495e;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .search-bar button:hover {
+    background-color: #3498db;
+    color: #ecf0f1;
+  }
+  
+  /* Estilos para o formulário */
+/* Estilos para o formulário */
+#container {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Aumentado o padding */
+    width: 500px; /* Aumentado a largura */
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 18px; /* Aumentado o tamanho da fonte */
+    margin-bottom: 8px;
+    color: #2c3e50; /* Azul mais escuro */
+    transition: color 0.3s ease;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px; /* Aumentado o padding */
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #3498db; /* Azul mais claro no foco */
+  }
+  
+  .submit-btn {
+    background-color: #3498db;
+    color: #ecf0f1;
+    padding: 14px 24px; /* Aumentado o padding */
+    font-size: 18px; /* Aumentado o tamanho da fonte */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2980b9; /* Azul mais escuro no hover */
+    transform: scale(1.05); /* Efeito de escala no hover */
+  }
+  
+  /* Estilos de hover para campos de entrada */
+  .form-group input:hover,
+  .form-group select:hover {
+    border-color: #3498db; /* Azul mais claro no hover */
+  }
+  
+
+  
+  .submit-btn {
+    background-color: #3498db;
+    color: #ecf0f1;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2980b9; /* Azul mais escuro no hover */
+    transform: scale(1.05); /* Efeito de escala no hover */
+  }
+  
+  /* Adicionando estilos de hover para campos de entrada */
+  .form-group input:hover,
+  .form-group select:hover {
+    border-color: #3498db; /* Azul mais claro no hover */
+  }
+  
+/* Estilos para os labels */
+label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #2c3e50; /* Azul mais escuro */
+    transition: color 0.3s ease;
+  }
+  
+  /* Estilos de hover para os labels */
+  label:hover {
+    color: #3498db; /* Azul mais claro no hover */
+  }
