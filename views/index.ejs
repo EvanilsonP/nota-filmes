@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>        <%= typeof title != 'undefined' ? title: 'Homepage' %>    </title>
+    <title> <%- title %></title>
 </head>
 <body>
     
@@ -29,5 +29,21 @@
 
     </form>
 
+    <section>
+        <h1>MOVIES</h1>
+
+        <div>
+            <% if(movies != '') { %>
+                <% movies.forEach(function(movie, index) { %>
+                    <ul>
+                        <p> <%- movie.movie %></p>
+                        <p> <%- movie.rating %></p>
+                        <p> <%- movie.date %></p>
+                    </ul>
+                <% }) %>
+            <% } %>
+        </div>
+
+    </section>
 </body>
 </html>

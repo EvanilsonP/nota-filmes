@@ -2,7 +2,13 @@ const Movie = require('../models/Movie');
 
 // Homepage
 const homePage = async (req, res) => {
-    res.render('index');
+    try {
+        const movies = await Movie.find({});
+        res.render('index', { title: 'Homepage', movies });
+    } 
+    catch (error) {
+        console.log(error);
+    }
 };
 
 // Creating movie
@@ -11,7 +17,7 @@ const addMovie = async (req, res) => {
         const { movie, rating, date } = req.body;
         const newMovie = await Movie.create({ movie, rating, date });
         console.log(newMovie);
-        res.render('index');
+        res.redirect('/');
     } 
 
     catch (error) {
