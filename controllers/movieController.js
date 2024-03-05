@@ -4,7 +4,9 @@ const Movie = require('../models/Movie');
 const homePage = async (req, res) => {
     try {
         const movies = await Movie.find({});
-        res.render('index', { title: 'Homepage', movies });
+        // const flashSuccessMSG = req.flash('infoSubmit');
+
+        res.render('index', { title: 'Homepage' });
     } 
     catch (error) {
         console.log(error);
@@ -68,4 +70,11 @@ const deleteMovie = async (req, res) => {
     }
 };
 
-module.exports = { homePage, addMovie, movieById, updatedMovie, deleteMovie };
+// Grab all movies
+const allMovies = async (req, res) => {
+    const movies = await Movie.find();
+    res.render('movies', { title: 'Movies', movies});
+};
+
+
+module.exports = { homePage, addMovie, movieById, updatedMovie, deleteMovie, allMovies};

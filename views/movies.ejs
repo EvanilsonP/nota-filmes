@@ -25,29 +25,22 @@
         </div>
       </header>
     
-      <div id="container">
-        <form action="/addMovie" method="POST">
 
-    
-          <div class="form-group">
-            <label for="name">Movie:</label>
-            <input type="text" id="name" name="movie" placeholder="Enter movie name">
-          </div>
-    
-          <div class="form-group">
-            <label for="rating">Rating:</label>
-            <input type="text" id="rating" name="rating" placeholder="Rating">
-          </div>
-    
-          <div class="form-group">
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" placeholder="Date">
-          </div>
-            
-          <button type="submit" class="submit-btn">Submit</button>
-    
-        </form>
-      </div>
+<section>
+
+   <div>
+       <% if(movies != '') { %>
+           <% movies.forEach(function(movie, index) { %>
+             <ul>
+               <p>Movie: <%- movie.movie %></p>
+               <p>Rating: <%- movie.rating %></p>
+               <p>Date: <%- movie.date %></p>
+             </ul>
+       <% }) %>
+           <% } %>
+       </div>
+
+</section>
 
 </body>
 </html>
